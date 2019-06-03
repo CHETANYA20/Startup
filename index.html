@@ -12,7 +12,44 @@
   </head>
   <body>
     <style>
-        .heading{color: whitesmoke; position: absolute; top: 50%;width: 100%; text-align: center; font-family: Roboto; font-size: 100px}
+        .heading{color: orange; position: absolute; top: 50%;width: 100%; text-align: center; font-family: Roboto; font-size: 80px;text-outline: 5px black solid;}
+        .btn{ 
+  border: 1px orange;
+  background: white;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-family: "Roboto";
+  cursor: pointer;
+  margin: 10px;
+  transition: 0.8s;
+  position: relative;
+  overflow: hidden;
+}
+.btn1,.btn2{
+  color: orange;
+}
+        
+        .btn::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: orange;
+  z-index: -1;
+  transition: 0.1s;
+}
+.btn1::before,.btn3::before{
+  top: 0;
+  border-radius: 0 0 50% 50%;
+}
+.btn2::before,.btn4::before{
+  bottom: 0;
+  border-radius: 50% 50% 0 0;
+}
+        .btn1:hover::before,.btn2:hover::before{
+  height: 180%;
+}
       </style>
     <!-- Fixed navbar -->
     
@@ -45,68 +82,10 @@
 </video>
           <h1 class="heading">Traditional Recipes Inside Home Kitchen</h1>
         
-        <li style="background-image: url(img/hero_bg_1.jpg)" class="overlay" data-stellar-background-ratio="0.5">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-8 col-md-offset-2">
-                <div class="probootstrap-slider-text text-center probootstrap-animate probootstrap-heading">
-                  <h1 class="primary-heading">Welcome</h1>
-                  <h3 class="secondary-heading">The Resto</h3>
-                  <p class="sub-heading">TASTY AND DELICIOUS FOODS <a href="#">in RESTO</a></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li style="background-image: url(img/hero_bg_2.jpg)" class="overlay">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-8 col-md-offset-2">
-                <div class="probootstrap-slider-text text-center probootstrap-animate probootstrap-heading">
-                  <h1 class="primary-heading">Dine</h1>
-                  <h3 class="secondary-heading">With Us</h3>
-                  <p class="sub-heading"><a href=""></a></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-        </li>
-        <li style="background-image: url(img/hero_bg_3.jpg)" class="overlay">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-8 col-md-offset-2">
-                <div class="probootstrap-slider-text text-center probootstrap-animate probootstrap-heading">
-                  <h1 class="primary-heading">Enjoy</h1>
-                  <h3 class="secondary-heading">With Us</h3>
-                  <p class="sub-heading"> <a href=""></a></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </li>
-      </ul>
+        
     </section>
 
-    <section class="probootstrap-section probootstrap-bg-white">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-5 text-center probootstrap-animate">
-            <div class="probootstrap-heading dark">
-              <h1 class="primary-heading">Discover</h1>
-              <h3 class="secondary-heading">Our Store</h3>
-              <span class="seperator">* * *</span>
-            </div>
-            <p>Resto the Restaurant is a place for simplicity. Good food, good juice, and good service. Simple is the name of the game, and we’re good at finding it in all the right places, even in your dining experience. Come join us and see what simplicity tastes like.</p>
-            <p><a href="#" class="probootstrap-custom-link">About Us</a></p>
-          </div>
-          <div class="col-md-6 col-md-push-1 probootstrap-animate">
-            <p><img src="img/img_1.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></p>
-          </div>
-        </div>
-        <!-- END row -->
-      </div>
-    </section>
+    
 
     <section class="probootstrap-section-bg overlay" style="background-image: url(img/hero_bg_2.jpg);" data-stellar-background-ratio="0.5" data-section="specialties">
       <div class="container">
@@ -118,82 +97,10 @@
             </div>
           </div>
         </div>
+          <button class="btn btn1">ShowCase Your Skills</button>
+          <button class="btn btn2" style="float:right">Deliver The Food</button>
       </div>
     </section>
-     <!-- probootstrap-bg-white -->
-    <section class="probootstrap-section">
-      <div class="container">
-        <div class="row">
-          <div class="probootstrap-cell-retro">
-            <div class="half">
-
-              <div class="probootstrap-cell probootstrap-animate" data-animate-effect="fadeIn">
-                <div class="image" style="background-image: url(img/img_square_1.jpg);"></div>
-                <div class="text text-center">
-                    <h3>Baked Potato Pizza</h3>
-                  <p class="price">Rs.5000</p>
-                </div>
-              </div>
-              <div class="probootstrap-cell reverse probootstrap-animate" data-animate-effect="fadeIn">
-                <div class="image" style="background-image: url(img/img_square_2.jpg);"></div>
-                <div class="text text-center">
-                  <h3>Crispy burger</h3>
-                  <p class="price">Rs.2000</p>
-                </div>
-              </div>
-              <div class="probootstrap-cell probootstrap-animate" data-animate-effect="fadeIn">
-                <div class="image" style="background-image: url(img/img_square_3.jpg);"></div>
-                <div class="text text-center">
-                  <h3>Imported Salmon Steak</h3>
-                  <p class="price">Rs.2000</p>
-                </div>
-              </div>
-
-            </div>
-            <div class="half">
-
-              <div class="probootstrap-cell probootstrap-animate" data-animate-effect="fadeIn">
-                <div class="image" style="background-image: url(img/img_square_4.jpg);"></div>
-                <div class="text text-center">
-                    <h3>Special pizza</h3>
-                  <p class="price">Rs.3200</p>
-                </div>
-              </div>
-              <div class="probootstrap-cell reverse probootstrap-animate" data-animate-effect="fadeIn">
-                <div class="image" style="background-image: url(img/img_square_5.jpg);"></div>
-                <div class="text text-center">
-                  <h3>Tuna Roast Sause</h3>
-                  <p class="price">Rs.2500</p>
-                </div>
-              </div>
-              <div class="probootstrap-cell probootstrap-animate" data-animate-effect="fadeIn">
-                <div class="image" style="background-image: url(img/img_square_1.jpg);"></div>
-                <div class="text text-center">
-                  <h3>Fried Potatoes with Garlic</h3>
-                  <p class="price">Rs.3200</p>
-                </div>
-              </div>
-              
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="probootstrap-section-bg overlay" style="background-image: url(img/hero_bg_4.jpg);"  data-stellar-background-ratio="0.5"  data-section="menu">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 text-center probootstrap-animate">
-            <div class="probootstrap-heading">
-              <h2 class="primary-heading">Discover</h2>
-              <h3 class="secondary-heading">Our Menu</h3>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    
     <section class="probootstrap-copyright">
       <div class="container">
         <div class="row">
